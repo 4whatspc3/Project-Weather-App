@@ -1,33 +1,40 @@
 (() => {
   "use strict";
-  var e = {
+  var e,
+    t,
+    n,
+    r,
+    o,
+    a,
+    c,
+    i,
+    s,
+    u,
+    p,
+    f,
+    l,
+    d,
+    v = {
       426: (e, t, n) => {
-        n.d(t, { Z: () => d });
+        n.d(t, { Z: () => i });
         var r = n(537),
           o = n.n(r),
           a = n(645),
-          c = n.n(a),
-          i = n(667),
-          s = n.n(i),
-          u = new URL(n(236), n.b),
-          l = c()(o()),
-          p = s()(u);
-        l.push([
+          c = n.n(a)()(o());
+        c.push([
           e.id,
-          `.hello {\n  color: red;\n  background: url(${p});\n}\n`,
+          "/*code here*/",
           "",
           {
             version: 3,
             sources: ["webpack://./src/style.css"],
             names: [],
-            mappings: "AAAA;EACE,UAAU;EACV,mDAA6B;AAC/B",
-            sourcesContent: [
-              '.hello {\n  color: red;\n  background: url("./icon.png");\n}\n',
-            ],
+            mappings: "AAAA,YAAY",
+            sourcesContent: ["/*code here*/"],
             sourceRoot: "",
           },
         ]);
-        const d = l;
+        const i = c;
       },
       645: (e) => {
         e.exports = function (e) {
@@ -62,50 +69,32 @@
                   null != s && (c[s] = !0);
                 }
               for (var u = 0; u < e.length; u++) {
-                var l = [].concat(e[u]);
-                (r && c[l[0]]) ||
+                var p = [].concat(e[u]);
+                (r && c[p[0]]) ||
                   (void 0 !== a &&
-                    (void 0 === l[5] ||
-                      (l[1] = "@layer"
-                        .concat(l[5].length > 0 ? " ".concat(l[5]) : "", " {")
-                        .concat(l[1], "}")),
-                    (l[5] = a)),
+                    (void 0 === p[5] ||
+                      (p[1] = "@layer"
+                        .concat(p[5].length > 0 ? " ".concat(p[5]) : "", " {")
+                        .concat(p[1], "}")),
+                    (p[5] = a)),
                   n &&
-                    (l[2]
-                      ? ((l[1] = "@media "
-                          .concat(l[2], " {")
-                          .concat(l[1], "}")),
-                        (l[2] = n))
-                      : (l[2] = n)),
+                    (p[2]
+                      ? ((p[1] = "@media "
+                          .concat(p[2], " {")
+                          .concat(p[1], "}")),
+                        (p[2] = n))
+                      : (p[2] = n)),
                   o &&
-                    (l[4]
-                      ? ((l[1] = "@supports ("
-                          .concat(l[4], ") {")
-                          .concat(l[1], "}")),
-                        (l[4] = o))
-                      : (l[4] = "".concat(o))),
-                  t.push(l));
+                    (p[4]
+                      ? ((p[1] = "@supports ("
+                          .concat(p[4], ") {")
+                          .concat(p[1], "}")),
+                        (p[4] = o))
+                      : (p[4] = "".concat(o))),
+                  t.push(p));
               }
             }),
             t
-          );
-        };
-      },
-      667: (e) => {
-        e.exports = function (e, t) {
-          return (
-            t || (t = {}),
-            e
-              ? ((e = String(e.__esModule ? e.default : e)),
-                /^['"].*['"]$/.test(e) && (e = e.slice(1, -1)),
-                t.hash && (e += t.hash),
-                /["'() \t\n]|(%20)/.test(e) || t.needQuotes
-                  ? '"'.concat(
-                      e.replace(/"/g, '\\"').replace(/\n/g, "\\n"),
-                      '"',
-                    )
-                  : e)
-              : e
           );
         };
       },
@@ -140,24 +129,24 @@
           for (var a = {}, c = [], i = 0; i < e.length; i++) {
             var s = e[i],
               u = r.base ? s[0] + r.base : s[0],
-              l = a[u] || 0,
-              p = "".concat(u, " ").concat(l);
-            a[u] = l + 1;
-            var d = n(p),
-              f = {
+              p = a[u] || 0,
+              f = "".concat(u, " ").concat(p);
+            a[u] = p + 1;
+            var l = n(f),
+              d = {
                 css: s[1],
                 media: s[2],
                 sourceMap: s[3],
                 supports: s[4],
                 layer: s[5],
               };
-            if (-1 !== d) t[d].references++, t[d].updater(f);
+            if (-1 !== l) t[l].references++, t[l].updater(d);
             else {
-              var v = o(f, r);
+              var v = o(d, r);
               (r.byIndex = i),
-                t.splice(i, 0, { identifier: p, updater: v, references: 1 });
+                t.splice(i, 0, { identifier: f, updater: v, references: 1 });
             }
-            c.push(p);
+            c.push(f);
           }
           return c;
         }
@@ -189,8 +178,8 @@
               t[i].references--;
             }
             for (var s = r(e, o), u = 0; u < a.length; u++) {
-              var l = n(a[u]);
-              0 === t[l].references && (t[l].updater(), t.splice(l, 1));
+              var p = n(a[u]);
+              0 === t[p].references && (t[p].updater(), t.splice(p, 1));
             }
             a = s;
           };
@@ -284,103 +273,46 @@
           }
         };
       },
-      236: (e, t, n) => {
-        e.exports = n.p + "31d6cfe0d16ae931b73c.png";
-      },
     },
-    t = {};
-  function n(r) {
-    var o = t[r];
-    if (void 0 !== o) return o.exports;
-    var a = (t[r] = { id: r, exports: {} });
-    return e[r](a, a.exports, n), a.exports;
+    m = {};
+  function h(e) {
+    var t = m[e];
+    if (void 0 !== t) return t.exports;
+    var n = (m[e] = { id: e, exports: {} });
+    return v[e](n, n.exports, h), n.exports;
   }
-  (n.m = e),
-    (n.n = (e) => {
-      var t = e && e.__esModule ? () => e.default : () => e;
-      return n.d(t, { a: t }), t;
+  (h.n = (e) => {
+    var t = e && e.__esModule ? () => e.default : () => e;
+    return h.d(t, { a: t }), t;
+  }),
+    (h.d = (e, t) => {
+      for (var n in t)
+        h.o(t, n) &&
+          !h.o(e, n) &&
+          Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
     }),
-    (n.d = (e, t) => {
-      for (var r in t)
-        n.o(t, r) &&
-          !n.o(e, r) &&
-          Object.defineProperty(e, r, { enumerable: !0, get: t[r] });
-    }),
-    (n.g = (function () {
-      if ("object" == typeof globalThis) return globalThis;
-      try {
-        return this || new Function("return this")();
-      } catch (e) {
-        if ("object" == typeof window) return window;
-      }
-    })()),
-    (n.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t)),
-    (() => {
-      var e;
-      n.g.importScripts && (e = n.g.location + "");
-      var t = n.g.document;
-      if (!e && t && (t.currentScript && (e = t.currentScript.src), !e)) {
-        var r = t.getElementsByTagName("script");
-        if (r.length) for (var o = r.length - 1; o > -1 && !e; ) e = r[o--].src;
-      }
-      if (!e)
-        throw new Error(
-          "Automatic publicPath is not supported in this browser",
-        );
-      (e = e
-        .replace(/#.*$/, "")
-        .replace(/\?.*$/, "")
-        .replace(/\/[^\/]+$/, "/")),
-        (n.p = e);
-    })(),
-    (n.b = document.baseURI || self.location.href),
-    (n.nc = void 0),
-    (() => {
-      var e = n(379),
-        t = n.n(e),
-        r = n(795),
-        o = n.n(r),
-        a = n(569),
-        c = n.n(a),
-        i = n(565),
-        s = n.n(i),
-        u = n(216),
-        l = n.n(u),
-        p = n(589),
-        d = n.n(p),
-        f = n(426),
-        v = {};
-      (v.styleTagTransform = d()),
-        (v.setAttributes = s()),
-        (v.insert = c().bind(null, "head")),
-        (v.domAPI = o()),
-        (v.insertStyleElement = l()),
-        t()(f.Z, v),
-        f.Z && f.Z.locals && f.Z.locals;
-      var h = n(236);
-      function m() {
-        console.log("I get called from print.js!");
-      }
-      console.log("hello world!"),
-        document.body.append(
-          (function () {
-            var e = document.createElement("div");
-            (e.textContent = "hi"), e.classList.add("hello");
-            var t = document.createElement("button");
-            return (
-              (t.textContent = "Click me and check the console!"),
-              (t.onclick = m),
-              e.appendChild(t),
-              e
-            );
-          })(),
-          (function () {
-            var e = document.createElement("div");
-            e.classList.add("hello");
-            var t = new Image();
-            return (t.src = h), e.appendChild(t), e;
-          })(),
-        );
-    })();
+    (h.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t)),
+    (h.nc = void 0),
+    (e = h(379)),
+    (t = h.n(e)),
+    (n = h(795)),
+    (r = h.n(n)),
+    (o = h(569)),
+    (a = h.n(o)),
+    (c = h(565)),
+    (i = h.n(c)),
+    (s = h(216)),
+    (u = h.n(s)),
+    (p = h(589)),
+    (f = h.n(p)),
+    (l = h(426)),
+    ((d = {}).styleTagTransform = f()),
+    (d.setAttributes = i()),
+    (d.insert = a().bind(null, "head")),
+    (d.domAPI = r()),
+    (d.insertStyleElement = u()),
+    t()(l.Z, d),
+    l.Z && l.Z.locals && l.Z.locals,
+    console.log("working");
 })();
 //# sourceMappingURL=app.bundle.js.map
