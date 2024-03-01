@@ -1,5 +1,7 @@
 import getTemp from "./dataComponents/get_temp";
 
+import getFeels from "./dataComponents/get_feels";
+
 const acessWeatherAPI = () => {
   async function getWeather(location, element) {
     try {
@@ -12,6 +14,10 @@ const acessWeatherAPI = () => {
 
       if (element.className == "tempData") {
         getTemp(element, weatherData);
+      }
+
+      if (element.className == "feelsData") {
+        getFeels(element, weatherData);
       }
     } catch (err) {
       element.textContent = "";
