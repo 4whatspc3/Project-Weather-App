@@ -5,16 +5,22 @@ import bundleDomElements from "./bundle_DOM_elements";
 import acessWeatherAPI from "./access_weather_API";
 
 const component = () => {
-  const { tempInfo, feelsInfo, humidityInfo } = bundleDomElements();
+  const { tempInfo, feelsInfo, humidityInfo, windSpeedInfo } =
+    bundleDomElements();
 
   const { getWeather } = acessWeatherAPI();
 
-  return { tempInfo, feelsInfo, humidityInfo, getWeather };
+  return { tempInfo, feelsInfo, humidityInfo, windSpeedInfo, getWeather };
 };
 
 const page = component();
 
-document.body.append(page.tempInfo, page.feelsInfo, page.humidityInfo);
+document.body.append(
+  page.tempInfo,
+  page.feelsInfo,
+  page.humidityInfo,
+  page.windSpeedInfo,
+);
 
 const temp = document.querySelector(".tempData");
 
@@ -27,6 +33,10 @@ page.getWeather("salvador", feels);
 const humidity = document.querySelector(".humidityData");
 
 page.getWeather("salvador", humidity);
+
+const windSpeed = document.querySelector(".windSpeedData");
+
+page.getWeather("salvador", windSpeed);
 
 const form = document.querySelector("form");
 

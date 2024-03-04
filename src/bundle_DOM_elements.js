@@ -4,6 +4,8 @@ import getDomFeels from "./domComponents/get_DOM_feels";
 
 import getDomHumidity from "./domComponents/get_DOM_humidity";
 
+import getDomWindSpeed from "./domComponents/get_DOM_windSpeed";
+
 const bundleDomElements = () => {
   const { tempInfo } = getDomTemp();
 
@@ -11,7 +13,9 @@ const bundleDomElements = () => {
 
   const { humidityInfo } = getDomHumidity();
 
-  return { tempInfo, feelsInfo, humidityInfo };
+  const { windSpeedInfo } = getDomWindSpeed();
+
+  return { tempInfo, feelsInfo, humidityInfo, windSpeedInfo };
 };
 
 export default bundleDomElements;
