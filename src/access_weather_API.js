@@ -27,7 +27,7 @@ const acessWeatherAPI = () => {
       if (element.className == "humidityData") {
         getHumidity(element, weatherData);
       }
-
+      
       if (element.className == "windSpeedData") {
         getWindSpeed(element, weatherData);
       }

@@ -6,6 +6,8 @@ import getDomHumidity from "./domComponents/get_DOM_humidity";
 
 import getDomWindSpeed from "./domComponents/get_DOM_windSpeed";
 
+import getDomChanceOfRain from "./domComponents/get_DOM_chanceOfRain";
+
 const bundleDomElements = () => {
   const { tempInfo } = getDomTemp();
 
@@ -15,7 +17,9 @@ const bundleDomElements = () => {
 
   const { windSpeedInfo } = getDomWindSpeed();
 
-  return { tempInfo, feelsInfo, humidityInfo, windSpeedInfo };
+  const { chanceOfRainInfo } = getDomChanceOfRain();
+
+  return { tempInfo, feelsInfo, humidityInfo, windSpeedInfo, chanceOfRainInfo };
 };
 
 export default bundleDomElements;
