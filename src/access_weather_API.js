@@ -8,6 +8,8 @@ import getWindSpeed from "./dataComponents/get_windSpeed";
 
 import getClouds from "./dataComponents/get_clouds";
 
+import getLocation from "./dataComponents/get_location";
+
 const acessWeatherAPI = () => {
   async function getWeather(location, element) {
     try {
@@ -29,13 +31,17 @@ const acessWeatherAPI = () => {
       if (element.className == "humidityData") {
         getHumidity(element, weatherData);
       }
-      
+
       if (element.className == "windSpeedData") {
         getWindSpeed(element, weatherData);
       }
 
       if (element.className == "cloudsData") {
         getClouds(element, weatherData);
+      }
+
+      if (element.className == "locationData") {
+        getLocation(element, weatherData);
       }
     } catch (err) {
       element.textContent = "";

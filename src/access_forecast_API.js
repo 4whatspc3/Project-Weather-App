@@ -12,7 +12,6 @@ const accessForecastAPI = () => {
 
       if (element.className == "chanceOfRain") {
         getChanceOfRain(element, weatherData);
-        
       }
     } catch (err) {
       element.textContent = "";

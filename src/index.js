@@ -7,14 +7,31 @@ import acessWeatherAPI from "./access_weather_API";
 import accessForecastAPI from "./access_forecast_API";
 
 const component = () => {
-  const { tempInfo, feelsInfo, humidityInfo, windSpeedInfo, chanceOfRainInfo, cloudsInfo } =
-    bundleDomElements();
+  const {
+    tempInfo,
+    feelsInfo,
+    humidityInfo,
+    windSpeedInfo,
+    chanceOfRainInfo,
+    cloudsInfo,
+    locationInfo,
+  } = bundleDomElements();
 
   const { getWeather } = acessWeatherAPI();
 
   const { getForecast } = accessForecastAPI();
 
-  return { tempInfo, feelsInfo, humidityInfo, windSpeedInfo, chanceOfRainInfo, cloudsInfo, getWeather, getForecast };
+  return {
+    tempInfo,
+    feelsInfo,
+    humidityInfo,
+    windSpeedInfo,
+    chanceOfRainInfo,
+    cloudsInfo,
+    locationInfo,
+    getWeather,
+    getForecast,
+  };
 };
 
 const page = component();
@@ -26,6 +43,7 @@ document.body.append(
   page.windSpeedInfo,
   page.chanceOfRainInfo,
   page.cloudsInfo,
+  page.locationInfo,
 );
 
 const temp = document.querySelector(".tempData");
@@ -51,6 +69,10 @@ page.getForecast("salvador", chanceOfRain);
 const clouds = document.querySelector(".cloudsData");
 
 page.getWeather("salvador", clouds);
+
+const location = document.querySelector(".locationData");
+
+page.getWeather("salvador", location);
 
 const form = document.querySelector("form");
 
