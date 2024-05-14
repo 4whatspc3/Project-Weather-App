@@ -10,6 +10,8 @@ import getClouds from "./dataComponents/get_clouds";
 
 import getLocation from "./dataComponents/get_location";
 
+import getDateTime from "./dataComponents/get_dateTime";
+
 const acessWeatherAPI = () => {
   async function getWeather(location, element) {
     try {
@@ -42,6 +44,10 @@ const acessWeatherAPI = () => {
 
       if (element.className == "locationData") {
         getLocation(element, weatherData);
+      }
+
+      if (element.className == "dateTimeData") {
+        getDateTime(element, weatherData);
       }
     } catch (err) {
       element.textContent = "";

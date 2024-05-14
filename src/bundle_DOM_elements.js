@@ -12,6 +12,8 @@ import getDomClouds from "./domComponents/get_DOM_clouds";
 
 import getDomLocation from "./domComponents/get_DOM_location";
 
+import getDomDateTime from "./domComponents/get_DOM_dateTime";
+
 const bundleDomElements = () => {
   const { tempInfo } = getDomTemp();
 
@@ -27,6 +29,8 @@ const bundleDomElements = () => {
 
   const { locationInfo } = getDomLocation();
 
+  const { dateTimeInfo } = getDomDateTime();
+
   return {
     tempInfo,
     feelsInfo,
@@ -35,6 +39,7 @@ const bundleDomElements = () => {
     chanceOfRainInfo,
     cloudsInfo,
     locationInfo,
+    dateTimeInfo,
   };
 };
 

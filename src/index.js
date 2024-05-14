@@ -15,6 +15,7 @@ const component = () => {
     chanceOfRainInfo,
     cloudsInfo,
     locationInfo,
+    dateTimeInfo,
   } = bundleDomElements();
 
   const { getWeather } = acessWeatherAPI();
@@ -29,6 +30,7 @@ const component = () => {
     chanceOfRainInfo,
     cloudsInfo,
     locationInfo,
+    dateTimeInfo,
     getWeather,
     getForecast,
   };
@@ -44,6 +46,7 @@ document.body.append(
   page.chanceOfRainInfo,
   page.cloudsInfo,
   page.locationInfo,
+  page.dateTimeInfo,
 );
 
 const temp = document.querySelector(".tempData");
@@ -73,6 +76,10 @@ page.getWeather("salvador", clouds);
 const location = document.querySelector(".locationData");
 
 page.getWeather("salvador", location);
+
+const dateTime = document.querySelector(".dateTimeData");
+
+page.getWeather("salvador", dateTime);
 
 const form = document.querySelector("form");
 
