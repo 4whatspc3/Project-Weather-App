@@ -4,7 +4,7 @@ const accessForecastAPI = () => {
   async function getForecast(location, element) {
     try {
       const response = await fetch(
-        `https://api.weatherapi.com/v1/forecast.json?key=47932d30445e427ba7611035241102&q=${location}&days=3`,
+        `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=5MQCH64U6D4N39X9Y56XRU7NE`,
         { mode: "cors" },
       );
 
