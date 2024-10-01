@@ -38,8 +38,17 @@ const component = () => {
 
 const page = component();
 
-document.body.append(page.chanceOfRainInfo);
+for (let key in page){
+  
+  if(typeof(page[key]) !== 'function' ){
+    document.body.append(page[key])
+    
+    const weatherDataClass = document.querySelector(`.${page[key].lastElementChild.className}`);
 
-const chanceOfRain = document.querySelector(".chanceOfRain");
+    page.getWeather("salvador, br", weatherDataClass);
+  }
 
-page.getForecast("salvador", chanceOfRain);
+}
+
+const chanceOfRain = document.querySelector('.chanceOfRain');
+page.getForecast('salvador, br', chanceOfRain);
