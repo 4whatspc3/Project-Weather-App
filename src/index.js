@@ -4,8 +4,6 @@ import bundleDomElements from "./bundle_DOM_elements";
 
 import acessWeatherAPI from "./access_weather_API";
 
-import accessForecastAPI from "./access_forecast_API";
-
 const component = () => {
   const {
     tempInfo,
@@ -20,8 +18,6 @@ const component = () => {
 
   const { getWeather } = acessWeatherAPI();
 
-  const { getForecast } = accessForecastAPI();
-
   return {
     tempInfo,
     feelsInfo,
@@ -32,7 +28,6 @@ const component = () => {
     locationInfo,
     dateTimeInfo,
     getWeather,
-    getForecast,
   };
 };
 
@@ -47,8 +42,4 @@ for (let key in page){
 
     page.getWeather("salvador, br", weatherDataClass);
   }
-
 }
-
-const chanceOfRain = document.querySelector('.chanceOfRain');
-page.getForecast('salvador, br', chanceOfRain);

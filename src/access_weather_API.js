@@ -2,6 +2,8 @@ import getTemp from "./dataComponents/get_temp";
 
 import getFeels from "./dataComponents/get_feels";
 
+import getChanceOfRain from "./dataComponents/get_chanceOfRain";
+
 import getHumidity from "./dataComponents/get_humidity";
 
 import getWindSpeed from "./dataComponents/get_windSpeed";
@@ -28,6 +30,10 @@ const acessWeatherAPI = () => {
 
       if (element.className == "feelsData") {
         getFeels(element, weatherData);
+      }
+
+      if (element.className == "chanceOfRain") {
+        getChanceOfRain(element, weatherData);
       }
 
       if (element.className == "humidityData") {
