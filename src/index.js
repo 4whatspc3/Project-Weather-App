@@ -1,8 +1,8 @@
-import './style.css';
+import "./style.css";
 
-import bundleDomElements from './bundle_DOM_elements';
+import bundleDomElements from "./bundle_DOM_elements";
 
-import acessWeatherAPI from './access_weather_API';
+import acessWeatherAPI from "./access_weather_API";
 
 const component = () => {
   const {
@@ -34,11 +34,13 @@ const component = () => {
 const page = component();
 
 for (const key in page) {
-  if (typeof (page[key]) !== 'function') {
+  if (typeof page[key] !== "function") {
     document.body.append(page[key]);
 
-    const weatherDataClass = document.querySelector(`.${page[key].lastElementChild.className}`);
+    const weatherDataClass = document.querySelector(
+      `.${page[key].lastElementChild.className}`,
+    );
 
-    page.getWeather('salvador, br', weatherDataClass);
+    page.getWeather("salvador, br", weatherDataClass);
   }
 }

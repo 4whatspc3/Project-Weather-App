@@ -1,9 +1,9 @@
 const getDomLocation = () => {
-  const locationInfo = document.createElement('div');
-  locationInfo.className = 'location-info';
+  const locationInfo = document.createElement("div");
+  locationInfo.className = "location-info";
 
-  const locationData = document.createElement('p');
-  locationData.className = 'locationData';
+  const locationData = document.createElement("p");
+  locationData.className = "locationData";
 
   locationInfo.append(locationData);
 
