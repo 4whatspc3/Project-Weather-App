@@ -1,12 +1,12 @@
 const getDomFeels = () => {
-  const feelsInfo = document.createElement("div");
-  feelsInfo.className = "feels-info";
+  const feelsInfo = document.createElement('div');
+  feelsInfo.className = 'feels-info';
 
-  const title = document.createElement("p");
-  title.textContent = "Feels Like";
+  const title = document.createElement('p');
+  title.textContent = 'Feels Like';
 
-  const feelsData = document.createElement("p");
-  feelsData.className = "feelsData";
+  const feelsData = document.createElement('p');
+  feelsData.className = 'feelsData';
 
   feelsInfo.append(title, feelsData);
 

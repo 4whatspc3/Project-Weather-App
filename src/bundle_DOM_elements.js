@@ -1,18 +1,18 @@
-import getDomTemp from "./domComponents/get_DOM_temp";
+import getDomTemp from './domComponents/get_DOM_temp';
 
-import getDomFeels from "./domComponents/get_DOM_feels";
+import getDomFeels from './domComponents/get_DOM_feels';
 
-import getDomHumidity from "./domComponents/get_DOM_humidity";
+import getDomHumidity from './domComponents/get_DOM_humidity';
 
-import getDomWindSpeed from "./domComponents/get_DOM_windSpeed";
+import getDomWindSpeed from './domComponents/get_DOM_windSpeed';
 
-import getDomChanceOfRain from "./domComponents/get_DOM_chanceOfRain";
+import getDomChanceOfRain from './domComponents/get_DOM_chanceOfRain';
 
-import getDomClouds from "./domComponents/get_DOM_clouds";
+import getDomClouds from './domComponents/get_DOM_clouds';
 
-import getDomLocation from "./domComponents/get_DOM_location";
+import getDomLocation from './domComponents/get_DOM_location';
 
-import getDomDateTime from "./domComponents/get_DOM_dateTime";
+import getDomDateTime from './domComponents/get_DOM_dateTime';
 
 const bundleDomElements = () => {
   const { tempInfo } = getDomTemp();

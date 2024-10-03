@@ -1,5 +1,3 @@
-const getLocation = (element, weatherData) => {
-  return (element.textContent = weatherData.address);
-};
+const getLocation = (element, weatherData) => (element.textContent = weatherData.address);
 
 export default getLocation;
