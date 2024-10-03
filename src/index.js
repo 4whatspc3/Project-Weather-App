@@ -18,6 +18,20 @@ const component = () => {
 
   const { getWeather } = acessWeatherAPI();
 
+  const displayData = (location, element) => {
+    Object.values(element).forEach((item) => {
+      if (typeof item !== "function") {
+        document.body.append(item);
+
+        const weatherDataClass = document.querySelector(
+          `.${item.lastElementChild.className}`,
+        );
+
+        element.getWeather(location, weatherDataClass);
+      }
+    });
+  };
+
   return {
     tempInfo,
     feelsInfo,
@@ -28,19 +42,20 @@ const component = () => {
     locationInfo,
     dateTimeInfo,
     getWeather,
+    displayData,
   };
 };
 
 const page = component();
 
-for (const key in page) {
-  if (typeof page[key] !== "function") {
-    document.body.append(page[key]);
+page.displayData("salvador, br", page);
 
-    const weatherDataClass = document.querySelector(
-      `.${page[key].lastElementChild.className}`,
-    );
+const form = document.querySelector("form");
 
-    page.getWeather("salvador, br", weatherDataClass);
-  }
-}
+const search = document.querySelector("#search");
+
+form.addEventListener("submit", (e) => {
+  page.displayData(search.value, page);
+
+  e.preventDefault();
+});
