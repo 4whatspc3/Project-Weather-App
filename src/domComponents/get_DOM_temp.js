@@ -3,6 +3,7 @@ const getDomTemp = () => {
   tempInfo.className = "temp-info";
 
   const title = document.createElement("p");
+  title.textContent = "Temperature";
 
   const tempData = document.createElement("p");
   tempData.className = "tempData";
