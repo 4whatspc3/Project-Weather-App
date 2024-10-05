@@ -14,14 +14,17 @@ const component = () => {
     cloudsInfo,
     locationInfo,
     dateTimeInfo,
+    createBlocksForecast,
   } = bundleDomElements();
 
   const { getWeather } = acessWeatherAPI();
 
   const displayData = (location, element) => {
+    const currentWeather = document.querySelector(".currentWeather");
+
     Object.values(element).forEach((item) => {
       if (typeof item !== "function") {
-        document.body.append(item);
+        currentWeather.append(item);
 
         const weatherDataClass = document.querySelector(
           `.${item.lastElementChild.className}`,
@@ -41,6 +44,7 @@ const component = () => {
     cloudsInfo,
     locationInfo,
     dateTimeInfo,
+    createBlocksForecast,
     getWeather,
     displayData,
   };
@@ -49,6 +53,8 @@ const component = () => {
 const page = component();
 
 page.displayData("salvador, br", page);
+
+page.createBlocksForecast();
 
 const form = document.querySelector("form");
 
