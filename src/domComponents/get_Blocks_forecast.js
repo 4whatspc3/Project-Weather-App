@@ -1,13 +1,11 @@
-const createBlocksForecast = () => {
+const createBlocksForecast = (number) => {
   const forecastContainer = document.querySelector(".forecastContainer");
 
-  for (let i = 0; i < 7; i++) {
-    const block = document.createElement("div");
+  const block = document.createElement("div");
 
-    block.setAttribute("block-forecast-index", `${i}`);
+  block.setAttribute("data-block-number", `${number}`);
 
-    forecastContainer.append(block);
-  }
+  forecastContainer.appendChild(block);
 };
 
 export default createBlocksForecast;

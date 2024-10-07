@@ -4,6 +4,8 @@ import bundleDomElements from "./bundle_DOM_elements";
 
 import acessWeatherAPI from "./access_weather_API";
 
+import bundleForecastElements from "./bundle_Forecast_elements";
+
 const component = () => {
   const {
     tempInfo,
@@ -14,7 +16,6 @@ const component = () => {
     cloudsInfo,
     locationInfo,
     dateTimeInfo,
-    createBlocksForecast,
   } = bundleDomElements();
 
   const { getWeather } = acessWeatherAPI();
@@ -44,17 +45,15 @@ const component = () => {
     cloudsInfo,
     locationInfo,
     dateTimeInfo,
-    createBlocksForecast,
     getWeather,
     displayData,
+    bundleForecastElements,
   };
 };
 
 const page = component();
 
 page.displayData("salvador, br", page);
-
-page.createBlocksForecast();
 
 const form = document.querySelector("form");
 
@@ -65,3 +64,5 @@ form.addEventListener("submit", (e) => {
 
   e.preventDefault();
 });
+
+page.bundleForecastElements();

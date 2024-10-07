@@ -1,5 +1,3 @@
-import createBlocksForecast from "./domComponents/get_Blocks_forecast";
-
 import getDomTemp from "./domComponents/get_DOM_temp";
 
 import getDomFeels from "./domComponents/get_DOM_feels";
@@ -42,7 +40,6 @@ const bundleDomElements = () => {
     cloudsInfo,
     locationInfo,
     dateTimeInfo,
-    createBlocksForecast,
   };
 };
 
