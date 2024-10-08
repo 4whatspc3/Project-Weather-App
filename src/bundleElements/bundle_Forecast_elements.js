@@ -1,12 +1,12 @@
-import createBlocksForecast from "./domComponents/get_Blocks_forecast";
+import createBlocksForecast from "../domComponents/get_Blocks_forecast";
 
-import getDomTemp from "./domComponents/get_DOM_temp";
+import getDomTemp from "../domComponents/get_DOM_temp";
 
-import getDomChanceOfRain from "./domComponents/get_DOM_chanceOfRain";
+import getDomChanceOfRain from "../domComponents/get_DOM_chanceOfRain";
 
-import getDomClouds from "./domComponents/get_DOM_clouds";
+import getDomClouds from "../domComponents/get_DOM_clouds";
 
-import getDomDateTime from "./domComponents/get_DOM_dateTime";
+import getDomDateTime from "../domComponents/get_DOM_dateTime";
 
 const getForecastElements = () => {
   const { tempInfo } = getDomTemp();

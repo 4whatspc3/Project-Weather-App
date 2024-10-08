@@ -1,12 +1,12 @@
-import "./style.css";
+import "./styles/style.css";
 
-import bundleDomElements from "./bundle_DOM_elements";
+import bundleDomElements from "./bundleElements/bundle_DOM_elements";
 
-import acessWeatherAPI from "./access_weather_API";
+import accessWeatherAPI from "./accessToAPI/access_weather_API";
 
-import bundleForecastElements from "./bundle_Forecast_elements";
+import bundleForecastElements from "./bundleElements/bundle_Forecast_elements";
 
-import accessForecastAPI from "./access_forecast_API";
+import accessForecastAPI from "./accessToAPI/access_forecast_API";
 
 const component = () => {
   const {
@@ -20,7 +20,7 @@ const component = () => {
     dateTimeInfo,
   } = bundleDomElements();
 
-  const { getWeather } = acessWeatherAPI();
+  const { getWeather } = accessWeatherAPI();
 
   const { getForecast } = accessForecastAPI();
 

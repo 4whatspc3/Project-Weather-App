@@ -1,10 +1,10 @@
-import getFctTemp from "./dataForecast/get_forecast_temp";
+import getFctTemp from "../dataForecast/get_forecast_temp";
 
-import getFctChanceOfRain from "./dataForecast/get_forecast_chanceOfRain";
+import getFctChanceOfRain from "../dataForecast/get_forecast_chanceOfRain";
 
-import getFctClouds from "./dataForecast/get_forecast_clouds";
+import getFctClouds from "../dataForecast/get_forecast_clouds";
 
-import getFctDateTime from "./dataForecast/get_forecast_dateTime";
+import getFctDateTime from "../dataForecast/get_forecast_dateTime";
 
 const accessForecastAPI = () => {
   async function getForecast(location, element, blockNumber) {

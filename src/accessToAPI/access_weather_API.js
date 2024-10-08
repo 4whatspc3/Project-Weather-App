@@ -1,20 +1,20 @@
-import getTemp from "./dataComponents/get_temp";
+import getTemp from "../dataComponents/get_temp";
 
-import getFeels from "./dataComponents/get_feels";
+import getFeels from "../dataComponents/get_feels";
 
-import getChanceOfRain from "./dataComponents/get_chanceOfRain";
+import getChanceOfRain from "../dataComponents/get_chanceOfRain";
 
-import getHumidity from "./dataComponents/get_humidity";
+import getHumidity from "../dataComponents/get_humidity";
 
-import getWindSpeed from "./dataComponents/get_windSpeed";
+import getWindSpeed from "../dataComponents/get_windSpeed";
 
-import getClouds from "./dataComponents/get_clouds";
+import getClouds from "../dataComponents/get_clouds";
 
-import getLocation from "./dataComponents/get_location";
+import getLocation from "../dataComponents/get_location";
 
-import getDateTime from "./dataComponents/get_dateTime";
+import getDateTime from "../dataComponents/get_dateTime";
 
-const acessWeatherAPI = () => {
+const accessWeatherAPI = () => {
   async function getWeather(location, element) {
     try {
       const response = await fetch(
@@ -65,4 +65,4 @@ const acessWeatherAPI = () => {
   return { getWeather };
 };
 
-export default acessWeatherAPI;
+export default accessWeatherAPI;
