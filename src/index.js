@@ -6,6 +6,8 @@ import acessWeatherAPI from "./access_weather_API";
 
 import bundleForecastElements from "./bundle_Forecast_elements";
 
+import accessForecastAPI from "./access_forecast_API";
+
 const component = () => {
   const {
     tempInfo,
@@ -19,6 +21,8 @@ const component = () => {
   } = bundleDomElements();
 
   const { getWeather } = acessWeatherAPI();
+
+  const { getForecast } = accessForecastAPI();
 
   const displayData = (location, element) => {
     const currentWeather = document.querySelector(".currentWeather");
@@ -36,6 +40,24 @@ const component = () => {
     });
   };
 
+  const passForecastDatA = (location, element) => {
+    const array = [
+      ".tempData",
+      ".chanceOfRain",
+      ".cloudsData",
+      ".dateTimeData",
+    ];
+
+    for (let index = 0; index < array.length; index++) {
+      for (let j = 0; j < 7; j++) {
+        const selectedData = document.querySelector(`.forecastContainer 
+          [data-block-number="${j}"] ${array[index]}`);
+
+        element.getForecast(location, selectedData, j);
+      }
+    }
+  };
+
   return {
     tempInfo,
     feelsInfo,
@@ -46,7 +68,9 @@ const component = () => {
     locationInfo,
     dateTimeInfo,
     getWeather,
+    getForecast,
     displayData,
+    passForecastDatA,
     bundleForecastElements,
   };
 };
@@ -55,6 +79,10 @@ const page = component();
 
 page.displayData("salvador, br", page);
 
+page.bundleForecastElements();
+
+page.passForecastDatA("salvador, br", page);
+
 const form = document.querySelector("form");
 
 const search = document.querySelector("#search");
@@ -62,7 +90,7 @@ const search = document.querySelector("#search");
 form.addEventListener("submit", (e) => {
   page.displayData(search.value, page);
 
+  page.passForecastDatA(search.value, page);
+
   e.preventDefault();
 });
-
-page.bundleForecastElements();
