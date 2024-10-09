@@ -1,0 +1,66 @@
+.location-info {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.locationData {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.currentWeather .date-time-info {
+    grid-area: 1 / 2 / 2 / 3;
+    justify-self: end;
+    text-align: right;
+}
+
+.currentWeather .date-time-info p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.currentWeather .clouds-info {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.currentWeather .cloudsData{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.currentWeather .temp-info {
+    grid-area: 3 / 1 / 7 / 2;
+    place-self: start;
+
+}
+
+.currentWeather .temp-info p:first-child {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.currentWeather .tempData {
+    font-size: 8rem;
+    font-weight: bold;
+}
+
+.feels-info {
+    grid-area: 3 / 2 / 4 / 3;
+}
+.currentWeather .chanceOfRain-info {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.humidity-info {
+    grid-area: 5 / 2 / 6 / 3;
+}
+.windSpeed-info {
+    grid-area: 6 / 2 / 7 / 3;
+}
+
+.currentWeather .feels-info,
+.currentWeather .chanceOfRain-info,
+.currentWeather .humidity-info,
+.currentWeather .windSpeed-info {
+    font-size: 16px;
+    font-weight: 400;
+}

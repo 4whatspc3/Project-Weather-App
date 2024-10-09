@@ -1,5 +1,7 @@
 import "./styles/style.css";
 
+import "./styles/style_CW.css";
+
 import bundleDomElements from "./bundleElements/bundle_DOM_elements";
 
 import accessWeatherAPI from "./accessToAPI/access_weather_API";
