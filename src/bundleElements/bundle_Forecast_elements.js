@@ -18,10 +18,10 @@ const getForecastElements = () => {
   const { dateTimeInfo } = getDomDateTime();
 
   return {
-    tempInfo,
-    chanceOfRainInfo,
-    cloudsInfo,
     dateTimeInfo,
+    cloudsInfo,
+    chanceOfRainInfo,
+    tempInfo,
   };
 };
 

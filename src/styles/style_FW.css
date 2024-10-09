@@ -1,0 +1,32 @@
+.forecastContainer > div {
+  flex: 1 1 auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.forecastContainer .date-time-info p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.forecastContainer .cloudsData {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.forecastContainer .chanceOfRain-info p:first-child {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.forecastContainer .temp-info p:first-child {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.forecastContainer .tempData {
+  font-size: 18px;
+  font-weight: bold;
+}
