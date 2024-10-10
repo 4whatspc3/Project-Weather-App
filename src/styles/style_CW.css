@@ -9,8 +9,6 @@
 
 .currentWeather .date-time-info {
   grid-area: 1 / 2 / 2 / 3;
-  justify-self: end;
-  text-align: right;
 }
 
 .currentWeather .date-time-info p {
