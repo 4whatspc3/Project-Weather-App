@@ -10,7 +10,7 @@ const accessForecastAPI = () => {
   async function getForecast(location, element, blockNumber) {
     try {
       const response = await fetch(
-        `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=5MQCH64U6D4N39X9Y56XRU7NE`,
+        `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=5MQCH64U6D4N39X9Y56XRU7NE&iconSet=icons2`,
         { mode: "cors" },
       );
 
@@ -24,7 +24,7 @@ const accessForecastAPI = () => {
         getFctChanceOfRain(element, weatherData, blockNumber);
       }
 
-      if (element.className == "cloudsData") {
+      if (element.className == "cloudsDataFW") {
         getFctClouds(element, weatherData, blockNumber);
       }
 

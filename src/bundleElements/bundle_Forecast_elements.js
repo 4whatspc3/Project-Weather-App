@@ -4,7 +4,7 @@ import getDomTemp from "../domComponents/get_DOM_temp";
 
 import getDomChanceOfRain from "../domComponents/get_DOM_chanceOfRain";
 
-import getDomClouds from "../domComponents/get_DOM_clouds";
+import getDomCloudsFW from "../domComponents/get_DOM_cloudsFW";
 
 import getDomDateTime from "../domComponents/get_DOM_dateTime";
 
@@ -13,13 +13,13 @@ const getForecastElements = () => {
 
   const { chanceOfRainInfo } = getDomChanceOfRain();
 
-  const { cloudsInfo } = getDomClouds();
+  const { cloudsInfoFW } = getDomCloudsFW();
 
   const { dateTimeInfo } = getDomDateTime();
 
   return {
     dateTimeInfo,
-    cloudsInfo,
+    cloudsInfoFW,
     chanceOfRainInfo,
     tempInfo,
   };

@@ -48,7 +48,7 @@ const component = () => {
     const array = [
       ".tempData",
       ".chanceOfRain",
-      ".cloudsData",
+      ".cloudsDataFW",
       ".dateTimeData",
     ];
 
