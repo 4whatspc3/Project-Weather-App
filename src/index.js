@@ -49,7 +49,7 @@ const component = () => {
       ".tempData",
       ".chanceOfRain",
       ".cloudsDataFW",
-      ".dateTimeData",
+      ".dateTimeDataFW",
     ];
 
     for (let index = 0; index < array.length; index++) {

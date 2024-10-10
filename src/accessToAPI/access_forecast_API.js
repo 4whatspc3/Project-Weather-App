@@ -28,7 +28,7 @@ const accessForecastAPI = () => {
         getFctClouds(element, weatherData, blockNumber);
       }
 
-      if (element.className == "dateTimeData") {
+      if (element.className == "dateTimeDataFW") {
         getFctDateTime(element, weatherData, blockNumber);
       }
     } catch (err) {
