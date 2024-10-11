@@ -18,9 +18,12 @@
 
 .currentWeather .clouds-info {
   grid-area: 2 / 1 / 3 / 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .currentWeather .cloudsData {
+  grid-area: 1 / 1 / 2 / 2;
   font-size: 16px;
   font-weight: 300;
 }
@@ -60,4 +63,23 @@
 .currentWeather .windSpeed-info {
   font-size: 16px;
   font-weight: 400;
+}
+
+.btnTemp {
+  grid-area: 2 / 1 / 3 / 2;
+  place-self: end;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #e5e5ff;
+  background-color: #00008b;
+  z-index: 1;
+}
+
+.btnTemp:hover {
+  background-color: #36367a;
 }

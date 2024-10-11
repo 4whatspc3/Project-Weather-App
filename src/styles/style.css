@@ -20,6 +20,8 @@ body {
   display: grid;
   grid-template: 1fr 2fr 1fr / repeat(3, 1fr);
   padding: 10px;
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(86,142,191,1) 100%);
 }
 
 .search-box {
@@ -45,7 +47,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #36367a
+  background-color: #36367a;
 }
 
 form input:focus {
