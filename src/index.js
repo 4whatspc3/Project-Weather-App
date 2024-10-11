@@ -12,6 +12,8 @@ import bundleForecastElements from "./bundleElements/bundle_Forecast_elements";
 
 import accessForecastAPI from "./accessToAPI/access_forecast_API";
 
+import convertTemp from "./dataComponents/convert_temp";
+
 const component = () => {
   const {
     tempInfo,
@@ -76,6 +78,7 @@ const component = () => {
     displayData,
     passForecastDatA,
     bundleForecastElements,
+    convertTemp
   };
 };
 
@@ -98,3 +101,5 @@ form.addEventListener("submit", (e) => {
 
   e.preventDefault();
 });
+
+page.convertTemp();
