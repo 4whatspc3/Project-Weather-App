@@ -12,7 +12,9 @@ import getWeather from "./accessToAPI/get_weather_API";
 
 import bundleForecastElements from "./bundleElements/bundle_Forecast_elements";
 
-import accessForecastAPI from "./accessToAPI/access_forecast_API";
+import fetchForecastData from "./accessToAPI/fetch_forecast_data";
+
+import getForecast from "./accessToAPI/get_forecast_API";
 
 import convertTemp from "./dataComponents/convert_temp";
 
@@ -27,8 +29,6 @@ const component = () => {
     locationInfo,
     dateTimeInfo,
   } = bundleDomElements();
-
-  const { getForecast } = accessForecastAPI();
 
   const displayData = async (location, element) => {
     
@@ -49,7 +49,7 @@ const component = () => {
     });
   };
 
-  const passForecastDatA = (location, element) => {
+  const passForecastDatA = async (location, element) => {
     const array = [
       ".tempData",
       ".chanceOfRain",
@@ -57,12 +57,14 @@ const component = () => {
       ".dateTimeDataFW",
     ];
 
+    const data = await fetchForecastData(location);
+
     for (let index = 0; index < array.length; index++) {
       for (let j = 0; j < 7; j++) {
         const selectedData = document.querySelector(`.forecastContainer 
           [data-block-number="${j}"] ${array[index]}`);
 
-        element.getForecast(location, selectedData, j);
+        element.getForecast(selectedData, data, j);
       }
     }
   };
