@@ -6,7 +6,9 @@ import "./styles/style_FW.css";
 
 import bundleDomElements from "./bundleElements/bundle_DOM_elements";
 
-import accessWeatherAPI from "./accessToAPI/access_weather_API";
+import fetchCurrentData from "./accessToAPI/fetch_current_data";
+
+import getWeather from "./accessToAPI/get_weather_API";
 
 import bundleForecastElements from "./bundleElements/bundle_Forecast_elements";
 
@@ -26,11 +28,12 @@ const component = () => {
     dateTimeInfo,
   } = bundleDomElements();
 
-  const { getWeather } = accessWeatherAPI();
-
   const { getForecast } = accessForecastAPI();
 
-  const displayData = (location, element) => {
+  const displayData = async (location, element) => {
+    
+    const data = await fetchCurrentData(location);
+
     const currentWeather = document.querySelector(".currentWeather");
 
     Object.values(element).forEach((item) => {
@@ -41,7 +44,7 @@ const component = () => {
           `.${item.lastElementChild.className}`,
         );
 
-        element.getWeather(location, weatherDataClass);
+        element.getWeather(weatherDataClass, data);
       }
     });
   };
