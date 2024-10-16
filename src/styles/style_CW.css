@@ -4,7 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content:flex-start;
+  justify-content: flex-start;
   gap: 20px;
 }
 
@@ -49,14 +49,22 @@
   font-weight: bold;
   text-align: center;
   color: #e5e5ff;
-  background: rgb(34,193,195);
-  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(86,142,191,1) 50%);
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(86, 142, 191, 1) 50%
+  );
   z-index: 1;
 }
 
 .btnTemp:hover {
-  background: rgb(34,193,195);
-  background: linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(86,142,191,1) 100%);
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    180deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(86, 142, 191, 1) 100%
+  );
 }
 
 .minorInfo {

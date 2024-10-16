@@ -21,7 +21,7 @@ function getForecast(element, data, blockNumber) {
 
   if (element.className === "dateTimeDataFW") {
     getFctDateTime(element, data, blockNumber);
-  }   
+  }
 }
 
 export default getForecast;

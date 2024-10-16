@@ -1,17 +1,16 @@
 const fetchCurrentData = async (location) => {
-    try {
-        const response = await fetch(
-          `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=5MQCH64U6D4N39X9Y56XRU7NE`,
-          { mode: "cors" },
-        );
-  
-        const weatherData = await response.json();
+  try {
+    const response = await fetch(
+      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=5MQCH64U6D4N39X9Y56XRU7NE`,
+      { mode: "cors" },
+    );
 
-        return weatherData;
+    const weatherData = await response.json();
 
-    } catch (err) {
-        console.log("something went wrong =/");
-    }
-}
+    return weatherData;
+  } catch (err) {
+    console.log("something went wrong =/");
+  }
+};
 
 export default fetchCurrentData;

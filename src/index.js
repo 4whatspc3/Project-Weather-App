@@ -31,35 +31,31 @@ const component = () => {
   } = bundleDomElements();
 
   const displayData = async (location, element) => {
-    
     const data = await fetchCurrentData(location);
-
-    
 
     Object.values(element).forEach((item) => {
       if (typeof item !== "function") {
-        if(item === locationInfo || item === cloudsInfo || item === tempInfo){
-            const mainInfo = document.querySelector(".mainInfo");
+        if (item === locationInfo || item === cloudsInfo || item === tempInfo) {
+          const mainInfo = document.querySelector(".mainInfo");
 
-            mainInfo.append(item);
+          mainInfo.append(item);
 
-            const weatherDataClass = document.querySelector(
-              `.${item.lastElementChild.className}`,
-            );
-    
-            element.getWeather(weatherDataClass, data);
-          } else {
-            const minorInfo = document.querySelector(".minorInfo");
+          const weatherDataClass = document.querySelector(
+            `.${item.lastElementChild.className}`,
+          );
 
-            minorInfo.append(item);
+          element.getWeather(weatherDataClass, data);
+        } else {
+          const minorInfo = document.querySelector(".minorInfo");
 
-            const weatherDataClass = document.querySelector(
-              `.${item.lastElementChild.className}`,
-            );
-    
-            element.getWeather(weatherDataClass, data);
-          }
+          minorInfo.append(item);
 
+          const weatherDataClass = document.querySelector(
+            `.${item.lastElementChild.className}`,
+          );
+
+          element.getWeather(weatherDataClass, data);
+        }
       }
     });
   };
@@ -98,7 +94,7 @@ const component = () => {
     displayData,
     passForecastDatA,
     bundleForecastElements,
-    convertTemp
+    convertTemp,
   };
 };
 

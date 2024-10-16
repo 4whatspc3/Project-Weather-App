@@ -15,7 +15,6 @@ import getLocation from "../dataComponents/get_location";
 import getDateTime from "../dataComponents/get_dateTime";
 
 function getWeather(element, data) {
-   
   if (element.className === "tempData") {
     getTemp(element, data);
   }
@@ -47,7 +46,6 @@ function getWeather(element, data) {
   if (element.className === "dateTimeData") {
     getDateTime(element, data);
   }
-
 }
 
 export default getWeather;
