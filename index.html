@@ -6,12 +6,19 @@
     <script defer="defer" src="app.bundle.js"></script>
   </head>
   <body>
-    <div class="search-box">
-      <form>
-        <label for="search">What do you want?</label>
-        <input name="search" id="search" />
-        <button class="inputCall">Search</button>
-      </form>
+    <div class="container">
+      <div class="search-box">
+        <form>
+          <input name="search" id="search" placeholder="Search location " />
+          <button class="inputCall">Search</button>
+        </form>
+      </div>
+      <div class="currentWeather">
+        <div class="mainInfo"></div>
+        <div class="mainButton"><button class="btnTemp">°F</button></div>
+        <div class="minorInfo"></div>
+      </div>
+      <div class="forecastContainer"></div>
     </div>
   </body>
 </html>
