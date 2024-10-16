@@ -20,31 +20,46 @@ import convertTemp from "./dataComponents/convert_temp";
 
 const component = () => {
   const {
+    locationInfo,
+    cloudsInfo,
     tempInfo,
+    dateTimeInfo,
     feelsInfo,
+    chanceOfRainInfo,
     humidityInfo,
     windSpeedInfo,
-    chanceOfRainInfo,
-    cloudsInfo,
-    locationInfo,
-    dateTimeInfo,
   } = bundleDomElements();
 
   const displayData = async (location, element) => {
     
     const data = await fetchCurrentData(location);
 
-    const currentWeather = document.querySelector(".currentWeather");
+    
 
     Object.values(element).forEach((item) => {
       if (typeof item !== "function") {
-        currentWeather.append(item);
+        if(item === locationInfo || item === cloudsInfo || item === tempInfo){
+            const mainInfo = document.querySelector(".mainInfo");
 
-        const weatherDataClass = document.querySelector(
-          `.${item.lastElementChild.className}`,
-        );
+            mainInfo.append(item);
 
-        element.getWeather(weatherDataClass, data);
+            const weatherDataClass = document.querySelector(
+              `.${item.lastElementChild.className}`,
+            );
+    
+            element.getWeather(weatherDataClass, data);
+          } else {
+            const minorInfo = document.querySelector(".minorInfo");
+
+            minorInfo.append(item);
+
+            const weatherDataClass = document.querySelector(
+              `.${item.lastElementChild.className}`,
+            );
+    
+            element.getWeather(weatherDataClass, data);
+          }
+
       }
     });
   };
@@ -70,14 +85,14 @@ const component = () => {
   };
 
   return {
+    locationInfo,
+    cloudsInfo,
     tempInfo,
+    dateTimeInfo,
     feelsInfo,
+    chanceOfRainInfo,
     humidityInfo,
     windSpeedInfo,
-    chanceOfRainInfo,
-    cloudsInfo,
-    locationInfo,
-    dateTimeInfo,
     getWeather,
     getForecast,
     displayData,

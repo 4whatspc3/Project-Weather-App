@@ -1,9 +1,13 @@
 .forecastContainer > div {
-  flex: 1 1 auto;
+  
+  border: 1px solid #000000;
+  border-radius: 10px;
   padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
 }
 
 .forecastContainer .date-time-info p {
@@ -14,6 +18,11 @@
 .forecastContainer .cloudsData {
   font-size: 14px;
   font-weight: bold;
+}
+
+.forecastContainer .chanceOfRain-info p,
+.forecastContainer .temp-info p{
+  text-align: center;
 }
 
 .forecastContainer .chanceOfRain-info p:first-child {
